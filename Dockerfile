@@ -10,9 +10,9 @@ RUN npm ci
 
 RUN chown -R express:nodejs /app
 
-USER express
+COPY --chown=express:nodejs . .
 
-COPY . .
+USER express
 
 EXPOSE 3000
 
