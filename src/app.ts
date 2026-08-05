@@ -12,6 +12,8 @@ import { swaggerSpec } from "./config/swagger";
 
 const app = express();
 
+app.set('trust proxy', 1);
+
 app.use(cors({ credentials: true }));
 app.use(morgan("dev"));
 app.use(express.json());
